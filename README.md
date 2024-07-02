@@ -1,3 +1,5 @@
+This is a fork to contain fixes until thomasloven ever decides to fix the main branch. I am not a develepor but this is being created to merge any fixes by the community. If you have any fixes please put a pull request in the main branch and make a issue here and I will pull it in. 
+
 # browser_mod 2
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
