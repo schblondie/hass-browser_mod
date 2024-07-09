@@ -10,17 +10,17 @@ _LOGGER = logging.getLogger(__name__)
 async def async_setup_view(hass):
 
     # Serve the Browser Mod controller and add it as extra_module_url
-    hass.http.register_static_path(
+    await hass.http.async_register_static_paths([
         FRONTEND_SCRIPT_URL,
         hass.config.path("custom_components/browser_mod/browser_mod.js"),
-    )
+    ])
     add_extra_js_url(hass, FRONTEND_SCRIPT_URL)
 
     # Serve the Browser Mod Settings panel and register it as a panel
-    hass.http.register_static_path(
+    await hass.http.async_register_static_paths([
         SETTINGS_PANEL_URL,
         hass.config.path("custom_components/browser_mod/browser_mod_panel.js"),
-    )
+    ])
     async_register_built_in_panel(
         hass=hass,
         component_name="custom",
